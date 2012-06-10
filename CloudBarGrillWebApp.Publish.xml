@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<publishData>
+  <publishProfile publishUrl="C:\Users\wuserd\Desktop\readu" deleteExistingFiles="False" ftpAnonymousLogin="False" ftpPassiveMode="True" msdeploySite="" msdeploySiteID="" msdeployRemoteSitePhysicalPath="" msdeployAllowUntrustedCertificate="False" msdeploySkipExtraFilesOnServer="True" msdeployMarkAsApp="False" profileName="Profile1" publishMethod="FileSystem" replaceMatchingFiles="True" userName="" savePWD="False" userPWD="" SelectedForPublish="True">
+    <file relUrl="Task2.aspx" publishTime="06/08/2012 00:57:27" />
+    <file relUrl="Scripts/jquery-1.4.1.js" publishTime="05/31/2012 12:06:45" />
+    <file relUrl="Site.Master" publishTime="06/07/2012 15:28:47" />
+    <file relUrl="Account/Web.config" publishTime="05/31/2012 12:06:45" />
+    <file relUrl="packages.config" publishTime="06/07/2012 18:00:22" />
+    <file relUrl="Scripts/jquery-1.4.1.min.js" publishTime="05/31/2012 12:06:45" />
+    <file relUrl="App_Data/CloudBarGrillData_log.ldf" publishTime="06/09/2012 01:43:54" />
+    <file relUrl="bin/RestSharp.xml" publishTime="06/07/2012 18:00:19" />
+    <file relUrl="bin/CloudBarGrillWebApp.pdb" publishTime="06/09/2012 01:54:20" />
+    <file relUrl="Styles/jquery-ui-1.8.21.custom.css" publishTime="06/06/2012 01:43:14" />
+    <file relUrl="Account/ChangePasswordSuccess.aspx" publishTime="05/31/2012 12:06:45" />
+    <file relUrl="Account/Login.aspx" publishTime="05/31/2012 12:06:45" />
+    <file relUrl="onholiday.aspx" publishTime="06/08/2012 01:15:53" />
+    <file relUrl="Account/ChangePassword.aspx" publishTime="05/31/2012 12:06:44" />
+    <file relUrl="bin/CloudBarGrillWebApp.dll" publishTime="06/09/2012 01:54:21" />
+    <file relUrl="App_Data/CloudBarGrillData.mdf" publishTime="06/09/2012 01:43:54" />
+    <file relUrl="Global.asax" publishTime="05/31/2012 12:06:45" />
+    <file relUrl="AddItem.aspx" publishTime="06/08/2012 00:23:52" />
+    <file relUrl="Task3.aspx" publishTime="06/08/2012 01:01:57" />
+    <file relUrl="Scripts/jquery-ui-1.8.21.custom.min.js" publishTime="06/06/2012 01:42:08" />
+    <file relUrl="Styles/Site.css" publishTime="06/07/2012 17:06:52" />
+    <file relUrl="Default.aspx" publishTime="06/08/2012 01:04:37" />
+    <file relUrl="bin/RestSharp.dll" publishTime="06/07/2012 18:00:19" />
+    <file relUrl="Account/Register.aspx" publishTime="05/31/2012 12:06:45" />
+    <file relUrl="Scripts/jquery-1.4.1-vsdoc.js" publishTime="05/31/2012 12:06:45" />
+  </publishProfile>
+</publishData>

@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="CloudBarGrillDataModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="CloudBarGrillDataModelStoreContainer">
+          <EntitySet Name="Items" EntityType="CloudBarGrillDataModel.Store.Items" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Orders" EntityType="CloudBarGrillDataModel.Store.Orders" store:Type="Tables" Schema="dbo" />
+        </EntityContainer>
+        <EntityType Name="Items">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="Ingredients" Type="nvarchar" MaxLength="150" />
+          <Property Name="Price" Type="money" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Orders">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ItemName" Type="nvarchar" MaxLength="50" />
+          <Property Name="Name" Type="nvarchar" MaxLength="50" />
+          <Property Name="Address" Type="nvarchar" MaxLength="50" />
+          <Property Name="Email" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="CloudBarGrillDataModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="CloudBarGrillDataEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Items" EntityType="CloudBarGrillDataModel.Item" />
+          <EntitySet Name="Orders" EntityType="CloudBarGrillDataModel.Order" />
+        </EntityContainer>
+        <EntityType Name="Item">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Ingredients" Type="String" MaxLength="150" Unicode="true" FixedLength="false" />
+          <Property Name="Price" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+        </EntityType>
+        <EntityType Name="Order">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Type="Int32" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="ItemName" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Name" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Address" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Email" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="CloudBarGrillDataModelStoreContainer" CdmEntityContainer="CloudBarGrillDataEntities">
+          <EntitySetMapping Name="Items"><EntityTypeMapping TypeName="CloudBarGrillDataModel.Item"><MappingFragment StoreEntitySet="Items">
+            <ScalarProperty Name="id" ColumnName="id" />
+            <ScalarProperty Name="Name" ColumnName="Name" />
+            <ScalarProperty Name="Ingredients" ColumnName="Ingredients" />
+            <ScalarProperty Name="Price" ColumnName="Price" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="Orders">
+            <EntityTypeMapping TypeName="CloudBarGrillDataModel.Order">
+              <MappingFragment StoreEntitySet="Orders">
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="ItemName" ColumnName="ItemName" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="CloudBarGrillModel">
+        <EntityTypeShape EntityType="CloudBarGrillDataModel.Item" Width="1.5" PointX="0.75" PointY="0.75" Height="1.5806820086638131" IsExpanded="true" />
+        <EntityTypeShape EntityType="CloudBarGrillDataModel.Order" Width="1.5" PointX="3.375" PointY="0.75" Height="1.9802864583333335" />
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>
